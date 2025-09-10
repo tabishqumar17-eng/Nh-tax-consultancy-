@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NH Tax Consultancy — GST • Income Tax • TDS • Accounting • Audit</title>
+  <meta name="description"
+    content="NH Tax Consultancy: GST, Income Tax, TDS, Accounting & Bookkeeping, Audit, Business Registration." />
+  <link rel="icon" href="Screenshot 2025-08-19 at 18.07.44.png" />
+  <style>
+    /* ---------- Basic Reset & Vars ---------- */
+    :root {
+      --brand: #10b981;
+      --dark: #0f172a;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --card: #fff
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--dark);
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: inherit
+    }
+
+    /* ---------- Layout ---------- */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px
+    }
+
+    header {
+      background: var(--card);
+      box-shadow: 0 1px 6px rgba(15, 23, 42, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 40
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .logo {
+      background: var(--brand);
+      color: white;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 999px
+    }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-decoration: none
+    }
+
+    nav a:hover {
+      color: var(--brand)
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 48px 0;
+      align-items: center
+    }
+
+    @media(min-width:900px) {
+      .hero {
+        grid-template-columns: 1fr 420px
+      }
+    }
+
+    .hero h1 {
+      font-size: 2.05rem;
+      line-height: 1.05;
+      margin: 0
+    }
+
+    .lead {
+      color: var(--muted);
+      margin-top: 12px
+    }
+
+    .cta-row {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      background: transparent
+    }
+
+    /* ---------- Quick Quote Card ---------- */
+    .card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06)
+    }
+
+    .card h3 {
+      margin: 0 0 6px 0
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px
+    }
+
+    .form-row .col {
+      flex: 1
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e6eef5;
+      border-radius: 10px;
+      font-size: 0.95rem
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.08);
+      border-color: var(--brand)
+    }
+
+    .muted {
+      font-size: 0.9rem;
+      color: var(--muted)
+    }
+
+    .file {
+      padding-bottom: 20px;
+      width: 60%;
+    }
+    .info{
+      color: red;
+      margin-top: 0px;
+      margin-left: 50px;
+    }
+
+    /* ---------- Services ---------- */
+    .services {
+      padding: 26px 0
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px
+    }
+
+    @media(min-width:640px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(min-width:1000px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .service {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(2, 6, 23, 0.03)
+    }
+
+    .service h4 {
+      margin: 0 0 8px
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    /* ---------- About & FAQ ---------- */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px
+    }
+
+    @media(min-width:900px) {
+      .two-col {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    details {
+      background: var(--card);
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #eef2f7
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      margin-top: 28px;
+      background: var(--card);
+      border-top: 1px solid #eef2f7;
+      padding: 28px 0
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px
+    }
+
+    @media(min-width:800px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr
+      }
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: var(--muted)
+    }
+
+    /* ---------- Utilities ---------- */
+    .mb {
+      margin-bottom: 12px
+    }
+
+    .center {
+      text-align: center
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f1f7f4;
+      color: var(--muted);
+      font-size: 0.85rem
+    }
+
+    /* ---------- Responsive tweaks ---------- */
+    @media(max-width:520px) {
+      .nav {
+        padding: 10px 0
+      }
+
+      .hero {
+        padding: 28px 0
+      }
+
+      .btn {
+        padding: 10px 12px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">NH</div>
+        <div>
+          <h1 style="margin:0;font-size:1rem">NH Tax Consultancy</h1>
+          <div class="small">GST • Income Tax • TDS • Accounting • Audit • Registration</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn-primary" style="margin-left:12px">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Reliable tax & accounting services that let you focus on growth</h1>
+        <p class="lead">NH Tax Consultancy helps businesses and freelancers with GST returns, income tax filing, TDS
+          compliance,MCA compliance , bookkeeping, Audits and business registration etc . Transparent pricing — secure
+          handling.</p>
+
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
+          <a href="#services" class="btn btn-ghost">View Services</a>
+        </div>
+
+        <ul class="small" style="margin-top:14px">
+          <li>Fast GST filings and reconciliations</li>
+          <li>Accurate bookkeeping with monthly reports</li>
+          <li>Friendly support and fixed-price plans</li>
+        </ul>
+      </div>
+
+      <aside class="card" aria-labelledby="quote-title">
+        <h3 id="quote-title">Quick Quote</h3>
+        <p class="muted">Tell us the basics — we will call you within one business day.</p>
+
+        <form id="quoteForm" class="mt" onsubmit="return false;">
+          <div class="mb"><input type="text" id="name" placeholder="Full name" required /></div>
+          <div class="mb"><input type="text" id="business" placeholder="Business / Company name (optional)" /></div>
+          <div class="form-row mb">
+            <div class="col"><input type="tel" id="phone" placeholder="Phone / WhatsApp" required /></div>
+            <div class="col"><input type="email" id="email" placeholder="Email" required /></div>
+          </div>
+          <div class="mb">
+            <select id="serviceSelect">
+              <option value="">Select service of interest</option>
+              <option>GST Services</option>
+              <option>Income Tax Services</option>
+              <option>TDS Services</option>
+              <option>Accounting & Bookkeeping</option>
+              <option>Audit Services</option>
+              <option>Business Registration / Certificates</option>
+              <option>Other Services</option>
+            </select>
+          </div>
+
+          <div class="mb"><textarea id="message" rows="3" placeholder=" message (optional)"></textarea></div>
+          <div class="file"><input type="file" id="my file" accept=".jpg, .png, image/jpeg" required />
+          <p class="info">*(.jpg, .png, image/jpeg)</p>
+
+          <div class="mb"><button id="quoteBtn" class="btn btn-primary" type="submit">Request Callback</button></div>
+          <div id="quoteMsg" class="small muted" aria-live="polite"></div>
+        </form>
+      </aside>
+    </section>
+
+    <section id="services" class="services">
+      <h2 style="margin-bottom:8px">Our Services</h2>
+      <p class="small">Comprehensive compliance, advisory and bookkeeping solutions for startups, freelancers and small
+        & medium businesses.</p>
+
+      <div class="grid" style="margin-top:16px">
+        <article class="service">
+          <h4>GST Services</h4>
+          <p>GST registration (Regular/composition/foreigner) <br>GST Return filing <br>GST Refound application<br> LUT
+            filing(Letter of undertaking)<br> GST Audit & Annul return<br> GST Cancellation & Revocation<br> GST notices
+            Reply (SCN,DRC-01A, etc.) </p>
+        </article>
+
+        <article class="service">
+          <h4>Income Tax Services</h4>
+          <p>ITR Filing (Salaried,Business,Captial Gains,etc.)<br>Advance Tax Calculaction &Computation<br> Income Tax
+            Previous 2 Year Return filing<br> Income Tax notices reply<br>Income Tax Refund<br>15CA 15CB filing </p>
+        </article>
+
+        <article class="service">
+          <h4>TDS Compliance</h4>
+          <p>TDS Returns filing-24Q,26Q,27Q,27EQ<br>TDS Correction of all returns<br>TDS Certificates of all
+            form's<br>FORM 26QB Filing<br>FORM 26QC Filing<br>FORM 26QD Filing<br>FORM 26QE Filing</p>
+        </article>
+
+        <article class="service">
+          <h4>Accounting & Bookkeeping</h4>
+          <p>Daily Bookkeeping<br> monthly Bookkeeping<br>Quarteerly bookkeeping<br>Annually bookkeeping<br> Financial
+            Statement Prepaction<br>Provisional Projected Financial Statement Prepaction</p>
+        </article>
+
+        <article class="service">
+          <h4>Audit Services</h4>
+          <p> internal Audits<br> tax Audits <br> Stock Audits (Especially for Hotels & Traders)</p>
+        </article>
+
+        <article class="service">
+          <h4>Business Registration & Certificates</h4>
+          <p>Company/OPC/LLP Registration<br>Proprietorship Registrations<br>Partnership Registration<br>Section 8
+            Company Registration <br>NGO Registration </p>
+        </article>
+        <article class="service">
+          <h4>Other Services</h4>
+          <p>TAN / PAN Application <br> DSC (Digital Signature Certificate)<br> Import & Export Code (IEC)<br>RCMC
+            Registration<br>Startup India registration<br>FSSAI License<br>NPO Darpan ID<br>80G & 12A
+            Registration<br>GeM Registration and Products Listing etc.<br>MSME /Udyam Registration<br>ISO
+            Registration<br> EPFO & ESIC Registration or Filing<br>LIN Certificate <br> Net worth
+            Certificate<br>Turnover Certificate <br>etc. </p>
+        </article>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" style="padding-bottom:18px">
+      <div class="two-col">
+        <div class="card">
+          <h3>Why Choose NH Tax Consultancy?</h3>
+          <ul style="margin-top:12px">
+            <li>Experienced professionals with hands-on compliance experience</li>
+            <li>Fixed & transparent pricing — no surprise fees</li>
+            <li>Secure document handling and digital workflows</li>
+            <li>Timely reminders and proactive compliance calendar</li>
+            <li>Personalised advisory for Your businesses</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Frequently Asked Questions</h3>
+          <div style="margin-top:10px;display:grid;gap:10px">
+            <details>
+              <summary>How do I share my documents?</summary>
+              <p class="small">You can upload via our client portal or send encrypted email/WhatsApp as instructed by
+                your consultant.</p>
+            </details>
+            <details>
+              <summary>What are your fees?</summary>
+              <p class="small">Fees depend on service and complexity. We offer fixed packages for startups and
+                subscription bookkeeping plans. Contact us for a quote.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="card">
+        <div class="footer-grid">
+          <div>
+            <h4>NH Tax Consultancy</h4>
+            <p class="small">Trusted allied financial services for entrepreneurs and Micro Small and Medium Enterprises
+            </p>
+            <div style="margin-top:12px">
+              <div class="small">📞 +91 9555836691</div>
+              <div class="small">✉️ nhtaxconsultancy4@gmail.com</div>
+              <div class="small"><A
+                  href="https://www.google.com/maps/place/NH+Tax+Consultancy/@28.5750546,77.3243155,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce5ae94fdf5a9:0xec4f8b6351228838!8m2!3d28.5750499!4d77.3268958!16s%2Fg%2F11s4cm59dx?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D">📍
+                  A-12 Dharmapali Palace Noida Sector-27 Atta Bhoja Market U.P 201301</A></div>
+            </div>
+          </div>
+
+          <div>
+            <h5>Office Hours</h5>
+            <p class="small">Mon — Fri: 9:30 AM — 6:30 PM<br />Sat: By appointment</p>
+
+            <h5 style="margin-top:10px">Quick Links</h5>
+            <div class="small" style="margin-top:-10px">
+              <h1><a href="https://www.instagram.com/nhtaxconsultancy?igsh=ZzN4OWRrbWMxc2E0&utm_source=qr"><img
+                    src="insta.webp" height="40px"></a> </h1>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="center small">
+    © <span id="year"></span> NH Tax Consultancy — All rights reserved.
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple form handling (no backend) — replace with API calls as needed
+    const quoteForm = document.getElementById('quoteForm');
+    const quoteMsg = document.getElementById('quoteMsg');
+
+    quoteForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const service = document.getElementById('serviceSelect').value;
+
+      if (!name || !phone || !email) {
+        quoteMsg.textContent = 'Please fill name, phone and email.';
+        return;
+      }
+
+      // naive phone validation
+      if (!/^\+?[0-9 \-]{7,20}$/.test(phone)) {
+        quoteMsg.textContent = 'Please enter a valid phone or WhatsApp number.';
+        return;
+      }
+
+      quoteMsg.textContent = 'Thanks — your request has been noted. We will call you within one business day.';
+      quoteForm.reset();
+
+      // TODO: send data to backend API using fetch()
+      // fetch('/api/lead', { method: 'POST', body: JSON.stringify({name,phone,email,service}) })
+    });
+
+    // Contact form
+    const contactForm = document.getElementById('contactForm');
+    const contactMsg = document.getElementById('contactMsg');
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const cname = document.getElementById('cname').value.trim();
+      const cemail = document.getElementById('cemail').value.trim();
+      const cmsg = document.getElementById('cmsg').value.trim();
+      if (!cname || !cemail || !cmsg) {
+        contactMsg.textContent = 'Please complete all fields.';
+        return;
+      }
+      contactMsg.textContent = 'Message sent. We will reply within one business day.';
+      contactForm.reset();
+      // TODO: send to backend
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
